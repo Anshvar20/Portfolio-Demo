@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container_1">
+      <div class="nav">
+        <div class="nav_brand">
+          <a href="#">Creative.</a>
+        </div>
+        <div class="btn-bars">
+          <button id="btntoggle" onclick=btn()><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="nav_menu" id="menu">
+          <div class="btn-toggle">
+            <button id="btncross" onclick=btnclose()><i class="fas fa-times"></i></button>
+          </div>
+          <a href="#">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="container_2">
+        <div class="container">
+          <div class="play-btn">
+            <button id="play-btn" onclick=play()><i class="fas fa-play"></i></button>
+          </div>
+          <div class="content_1">
+            <div class="dash">
+            </div>
+            <div class="content">
+              <h2>Hi There !</h2>
+              <h2>I'm <span id="span"> Ansh</span></h2>
+              <h2>Varshney</h2>
+              <div class="btns">
+                <div class="btn btn-primary">
+                  <a href="#">Contact Us</a>
+                </div>
+                <div class="btn btn-db">
+                  <a href="#">See Work</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var btnToggle = document.getElementById('btntoggle');
+      var btnCross = document.getElementById('btncross');
+      var navmenu = document.getElementById('menu');
+      var playbtn = document.getElementById('play-btn');
+      var spanT = document.getElementById('span')
+
+      function btn() {
+        navmenu.classList.add("active");
+        btnToggle.classList.remove("active");
+        btnCross.classList.add("active");
+      }
+      function btnclose() {
+          navmenu.classList.remove("active");
+          btnToggle.classList.add("active");
+          btnCross.classList.remove("active");
+      }
+      function play() {
+        spanT.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
